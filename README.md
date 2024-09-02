@@ -61,13 +61,13 @@ src/
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/your-repository.git
+   git clone https://github.com/redianmarku/data-visualization-frontend
    ```
 
 2. **Navigate to the project directory:**
 
    ```bash
-   cd your-repository
+   data-visualization-frontend
    ```
 
 3. **Install dependencies:**
