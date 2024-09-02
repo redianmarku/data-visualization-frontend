@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Data Visualization Frontend Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This project is a React application designed to fetch data from an API and visualize it using a bar chart. It demonstrates best practices in React development, including the use of custom hooks, component-based architecture, and basic testing.
 
-In the project directory, you can run:
+## Technologies Used
 
-### `npm start`
+- **React**: A JavaScript library for building user interfaces.
+- **Chart.js**: A library for creating interactive charts.
+- **React-Chartjs-2**: A React wrapper for Chart.js.
+- **Axios**: A promise-based HTTP client for making API requests.
+- **CSS**: For styling the application.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The project is organized as follows:
 
-### `npm test`
+```
+src/
+|-- components/
+|   |-- BarChart.js
+|   |-- DataFetcher.js
+|   |-- Home.js
+|   |-- common/
+|       |-- ErrorMessage.js
+|       |-- LoadingSpinner.js
+|-- hooks/
+|   |-- useFetchData.js
+|-- styles/
+|   |-- App.css
+|   |-- BarChart.css
+|   |-- Home.css
+|-- setupTests.js
+|-- App.js
+|-- index.js
+|-- tests/
+|   |-- components/
+|       |-- BarChart.test.js
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **`BarChart.js`**: A component that renders a bar chart using Chart.js.
+- **`DataFetcher.js`**: A component that uses a custom hook to fetch data and display the bar chart.
+- **`Home.js`**: The main component with a button to fetch data and display the chart.
+- **`common/`**: Contains helper components like `ErrorMessage` and `LoadingSpinner`.
+- **`hooks/`**: Contains the custom hook `useFetchData` for managing data fetching.
+- **`styles/`**: Contains CSS files for styling the application.
+- **`tests/`**: Contains unit tests for components.
 
-### `npm run build`
+## Key Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Custom Hook**: Created a custom hook `useFetchData` to handle data fetching logic. This promotes code reuse and separation of concerns.
+- **Error Handling**: Includes an `ErrorMessage` component to display error messages in case of data fetching failures.
+- **Loading Indicator**: Utilizes a `LoadingSpinner` component to show a loading spinner while data is being fetched.
+- **Responsive Design**: The application is designed to be responsive for mobile devices.
+- **Testing**: Implemented a basic test for the `BarChart` component to ensure its functionality. Tests are located in the `tests/` folder.
+- **Code Comments**: Added comments throughout the code to explain complex logic and ensure clarity.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## How to Run
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the repository:**
 
-### `npm run eject`
+   ```bash
+   git clone https://github.com/yourusername/your-repository.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. **Navigate to the project directory:**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   cd your-repository
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. **Install dependencies:**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+4. **Start the development server:**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+5. **Run tests:**
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+   ```bash
+   npm test
+   ```

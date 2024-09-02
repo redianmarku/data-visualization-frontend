@@ -1,0 +1,33 @@
+.home {
+  text-align: center;
+  padding: 20px;
+}
+
+.btn-view-data {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.btn-view-data:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 480px) {
+  .home {
+    padding: 5px;
+  }
+
+  .home > h1 {
+    font-size: 26px;
+  }
+
+  .btn-view-data {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
